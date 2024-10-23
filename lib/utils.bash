@@ -85,6 +85,7 @@ get_machine_os() {
 get_machine_processor() {
 	KERNEL=$(uname -m)
 	case "${KERNEL}" in
+	arm64*) echo 'arm64' ;;
 	x86_64*) echo 'x64' ;;
 	*)
 		# dump error to stderr
